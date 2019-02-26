@@ -1,4 +1,4 @@
 -- Title: HelloWorld
--- Name: Your Name
+-- Name: Bryan Rodriguez
 -- Course: ICS2O/3C
 -- This program displays Hello to the simulator and to the command terminal.
