@@ -14,9 +14,10 @@ local correctAnswer
 local questionObject
 local correctObject
 local userAnswer
+local randomOperator
 
 
-local function AskQuestion(  )
+local function AskQuestion()
 	-- genarate a random number between 1 and 2
 
 	randomOperator = math.random(1,2)
@@ -35,5 +36,15 @@ local function AskQuestion(  )
 		questionObject.text = randomNumber1 .. " + " .. randomNumber2 .. " = "
 
 	-- otherwise, if the random operator is 2, do subtraction
-	elseif 	
+	elseif (randomOperator == 2) then
+		-- calculate the correct answer
+		correctAnswer = randomNumber1 - randomNumber2
+
+		-- create question in the text object
+		questionObject.text = randomNumber1 .. " - " .. randomNumber2 .. " = "
+	end	
+
 end
+
+-- call function
+AskQuestion()

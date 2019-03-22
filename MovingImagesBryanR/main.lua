@@ -12,6 +12,11 @@ display.setStatusBar(display.HiddenStatusBar)
 -- global variables
 scrollSpeed = 3
 
+
+local wackSound = audio.loadSound( "sounds/wack.mp3" )
+local wackSoundChannel
+
+
 -- backgrond image with width and height
 local backgrondgroundImage = display.newImageRect("Images/background.png", 2048, 1536)
 
@@ -25,6 +30,9 @@ beetleship.alpha = 0
 beetleship.x = 0
 beetleship.y = display.contentHeight/3
 
+wackSoundChannel = audio.play(wackSound)
+
+
 -- Function: MoveShip
 -- Input: this function accepts an event listener
 -- Output: none
@@ -37,6 +45,8 @@ local function MoveShip(event)
 	-- it moves so that it fades out
 	beetleship.alpha = beetleship.alpha + 0.01
 end
+
+
 
 -- Moveship will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
@@ -61,3 +71,4 @@ end
 
 -- MoveStar will be called over and over again
 Runtime:addEventListener("enterFrame", MoveStar)
+
