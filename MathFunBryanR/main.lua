@@ -96,6 +96,7 @@ local correctAnswer
 local questionObject
 local correctObject
 local userAnswer
+local randomOperator
 
 
 local function AskQuestion()
@@ -118,6 +119,7 @@ local function AskQuestion()
 
 	-- otherwise, if the random operator is 2, do subtraction
 	elseif (randomOperator == 2) then
+<<<<<<< HEAD
 
 		-- calculate the correct answer
 		correctAnswer = randomNumber1 - randomNumber2
@@ -126,3 +128,16 @@ local function AskQuestion()
 		questionObject.text = randomNumber1 .. " - " .. randomNumber2 .. " = "
     end
 end
+=======
+		-- calculate the correct answer
+		correctAnswer = randomNumber1 - randomNumber2
+
+		-- create question in the text object
+		questionObject.text = randomNumber1 .. " - " .. randomNumber2 .. " = "
+	end	
+
+end
+
+-- call function
+AskQuestion()
+>>>>>>> 5458a87817e240142e64fceca4a64a12274894f3
