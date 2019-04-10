@@ -66,7 +66,8 @@ local function NumericFieldListener( event )
 	    end	
         
 	end
-end			
+end
+
 
 -------------------------------------------------------------
 -- OBJECT CREATION
@@ -82,7 +83,7 @@ correctObject:setTextColor(155/255, 155/255, 3/255)
 correctObject.isVisable = false
 
 -- create incorrect object
-incorrectObject = display.newText( "Incorrect", display.contentWidth/2, display.contentHeight*2/3, nil, 50 )
+incorrectObject = display.newText( "incorrect", display.contentWidth/2, display.contentHeight*2/3, nil, 50 )
 incorrectObject:setTextColor(155/255, 155/255, 3/255)
 incorrectObject.isVisable = false
 
