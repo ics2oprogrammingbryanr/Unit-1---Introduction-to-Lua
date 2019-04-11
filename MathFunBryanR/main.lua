@@ -6,6 +6,10 @@
 display.setStatusBar(display.HiddenStatusBar)
 -- set background colour
 display.setDefault("background", 24/255, 146/255, 30/255)
+
+--------------------------------------------------------------
+-- LOCAL VARIABLES
+--------------------------------------------------------------
 --------------------------------------------------------------
 -- LOCAL VARIABLES
 --------------------------------------------------------------
@@ -68,11 +72,11 @@ end
 -------------------------------------------------------------
 
 -- disaplays a question and sets the colour
-questionObject = display.newText( "hey" display.contentWidth/3, display.contentHeight/2, nil, 50 )
+questionObject = display.newText( "", display.contentWidth/3, display.contentHeight/2, nil, 50 )
 questionObject:setTextColor(100/255, 3/255, 50/255)
 
 -- create the correct text object and make it invisable
-correctObject = display.newText( "Correct!", display.contentWidth/2, display.contentHeight*2/3, nil )
+correctObject = display.newText( "Correct!", display.contentWidth/2, display.contentHeight*2/3, nil, 50 )
 correctObject:setTextColor(155/255, 155/255, 3/255)
 correctObject.isVisable = false
 
@@ -90,13 +94,7 @@ numericField:addEventListener( "userInput", NumericFieldListener )
 -- call the function to ask the question
 AskQuestion()
 -- sreate local variables
-local randomNumber1
-local randomNumber2
-local correctAnswer
-local questionObject
-local correctObject
-local userAnswer
-local randomOperator
+
 
 
 local function AskQuestion()
@@ -119,7 +117,7 @@ local function AskQuestion()
 
 	-- otherwise, if the random operator is 2, do subtraction
 	elseif (randomOperator == 2) then
-<<<<<<< HEAD
+
 
 		-- calculate the correct answer
 		correctAnswer = randomNumber1 - randomNumber2
@@ -128,16 +126,18 @@ local function AskQuestion()
 		questionObject.text = randomNumber1 .. " - " .. randomNumber2 .. " = "
     end
 end
-=======
-		-- calculate the correct answer
-		correctAnswer = randomNumber1 - randomNumber2
 
-		-- create question in the text object
-		questionObject.text = randomNumber1 .. " - " .. randomNumber2 .. " = "
-	end	
-
-end
 
 -- call function
 AskQuestion()
->>>>>>> 5458a87817e240142e64fceca4a64a12274894f3
+--------------------------------------------------------------
+-- LOCAL VARIABLES
+--------------------------------------------------------------
+
+-- create local variables
+
+
+--------------------------------------------------------------
+-- LOCAL FUNCTIONS
+--------------------------------------------------------------
+
